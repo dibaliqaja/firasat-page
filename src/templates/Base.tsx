@@ -7,6 +7,7 @@ import { Meta } from '../layout/Meta';
 import { Section } from '../layout/Section';
 import { AppConfig } from '../utils/AppConfig';
 import { Banner } from './Banner';
+import Form from './Form';
 import { Hero } from './Hero';
 import { VerticalContent } from './VerticalContent';
 
@@ -83,7 +84,7 @@ const Base = () => (
       </ul>
     </div>
     <div className="mb-12 mt-7 text-center">
-      <Link href="https://api.whatsapp.com/send/?phone=62895338223358&text=Halo%20Saya%20Ingin%20Pesan%20Buku%20Firasat">
+      <Link href="#form-checkout">
         <Button xl>Pesan Sekarang</Button>
       </Link>
     </div>
@@ -175,13 +176,18 @@ const Base = () => (
       </div>
       <div className="mt-5 text-center">
         <h2 className="text-2xl font-bold text-gray-900">
-          Harga Normal <s style={{ color: 'rgb(167 180 43)' }}>Rp 350.000</s>
+          Harga Normal{' '}
+          <s>Rp {AppConfig.productPriceNormal.toLocaleString('id-ID')}</s>
           <br />
-          <strong> </strong>
           <em>
             Spesial Hari Ini <br />
           </em>
-          hanya <strong>Rp 149.999</strong>
+          hanya{' '}
+          <strong
+            style={{ color: 'rgb(160 196 19)', textDecoration: 'underline' }}
+          >
+            Rp {AppConfig.productPrice.toLocaleString('id-ID')}
+          </strong>
         </h2>
       </div>
 
@@ -191,6 +197,24 @@ const Base = () => (
         title={''}
         description={''}
       />
+    </div>
+
+    <div className="mx-auto mt-20 max-w-screen-lg px-3" id="form-checkout">
+      <div className="text-center">
+        <h2
+          className="text-xl font-bold text-gray-900"
+          style={{ padding: '20px' }}
+        >
+          SILAHKAN MENGISI DATA DIBAWAH UNTUK PEMESANAN BUKU
+        </h2>
+      </div>
+      <div className="text-center">
+        <h2 className="text-xl font-semibold text-gray-900">
+          <em>FORMULIR PEMESANAN</em>
+        </h2>
+      </div>
+
+      <Form />
     </div>
 
     <div style={{ marginBottom: '5rem' }}></div>
