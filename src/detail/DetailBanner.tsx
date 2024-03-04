@@ -1,13 +1,13 @@
-import type { ReactNode } from 'react';
-
-type ICTABannerProps = {
+type IDetailBannerProps = {
   title: string;
   subtitle: string;
-  button: ReactNode;
 };
 
-const CTABanner = (props: ICTABannerProps) => (
-  <div className="bg-primer flex flex-row flex-wrap items-center justify-between rounded-md p-7 text-left">
+const DetailBanner = (props: IDetailBannerProps) => (
+  <div
+    className="bg-primer mx-auto flex flex-row flex-wrap items-center justify-between rounded-md p-7 text-left"
+    style={{ width: '100%' }}
+  >
     <div className="text-2xl font-semibold">
       <div className="text-gray-900">{props.title}</div>
       <div className="text-gray-900">{props.subtitle}</div>
@@ -25,11 +25,7 @@ const CTABanner = (props: ICTABannerProps) => (
         dan Penampilannya. dan masih banyak yang lainnya
       </li>
     </div>
-
-    <div className="whitespace-no-wrap mt-3 sm:ml-2 sm:mt-0">
-      {props.button}
-    </div>
   </div>
 );
 
-export { CTABanner };
+export { DetailBanner };

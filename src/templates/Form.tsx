@@ -83,7 +83,7 @@ const Form = () => {
       %0ATerima kasih.`;
 
     const whatsappURL = `https://wa.me/${adminWhatsapp}?text=${message}`;
-    window.open(whatsappURL, '_blank');
+    window.open(whatsappURL, '_self');
 
     setFormValues({
       name: '',
@@ -149,7 +149,7 @@ const Form = () => {
         <p className="!mt-0 text-red-500">{validationErrors.address}</p>
       )}
 
-      <div className="flex items-center justify-evenly">
+      <div className="flex items-center justify-evenly gap-2">
         <p className="text-lg font-semibold text-gray-800">Jumlah Pesanan</p>
         <div className="flex items-center space-x-2">
           <button
@@ -161,7 +161,7 @@ const Form = () => {
             -
           </button>
           <input
-            style={{ fontSize: '17px', textAlign: 'center' }}
+            style={{ fontSize: '17px', textAlign: 'center', width: '5rem' }}
             type="number"
             name="quantity"
             value={formValues.quantity}

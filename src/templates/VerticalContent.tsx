@@ -6,8 +6,6 @@ const VerticalContent = () => (
     <VerticalContentRow
       image="/assets/images/image_hero.webp"
       imageAlt="Image Content"
-      title={''}
-      description={''}
     />
   </Section>
 );

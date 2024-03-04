@@ -2,11 +2,11 @@ import Link from 'next/link';
 
 import { Button } from '@/button/Button';
 
+import { DetailBanner } from '../detail/DetailBanner';
 import { VerticalContentRow } from '../feature/VerticalContentRow';
 import { Meta } from '../layout/Meta';
 import { Section } from '../layout/Section';
 import { AppConfig } from '../utils/AppConfig';
-import { Banner } from './Banner';
 import Form from './Form';
 import { Hero } from './Hero';
 import { VerticalContent } from './VerticalContent';
@@ -16,7 +16,12 @@ const Base = () => (
     <Meta title={AppConfig.title} description={AppConfig.description} />
     <Hero />
     <VerticalContent />
-    <Banner />
+    <Section>
+      <DetailBanner
+        title="Buku ini membahas berbagai Metode dan Teknik untuk memahami Karakter dan Rehasia Kepribadian Seseorang,"
+        subtitle="antara lain :"
+      />
+    </Section>
     <Section
       title="Kenapa Kamu Wajib Membaca Buku Ini"
       description="Memperluas Pemahaman Komunikasi Nonverbal, Meningkatkan Keterampilan Komunikasi, Memahami Pikiran dan Perasaan dengan Lebih Akurat, Membuka Jendela ke Dunia Emosi, Menghindari Kesalah pahaman, Mengetahui sifat dan karakter seseorang."
@@ -24,10 +29,11 @@ const Base = () => (
       <VerticalContentRow
         image="/assets/images/image_best.webp"
         imageAlt="Best Seller"
-        title={''}
-        description={''}
       />
-      <div className="my-12 text-center text-xl">
+      <div
+        className="mx-auto my-12 text-center text-xl"
+        style={{ width: '80%' }}
+      >
         Fakta di atas menegaskan bahwa buku ini sangat otoritatif untuk dibaca.
         Tak mudah mengenal karakter seseorang tanpa landasan ilmu yang benar dan
         tepat. Tentu kita tak mau gambling dalam hal ini. Reputasi kita
@@ -50,8 +56,6 @@ const Base = () => (
     <VerticalContentRow
       image="/assets/images/image_content.webp"
       imageAlt="Image Content"
-      title={''}
-      description={''}
     />
 
     <div className="list">
@@ -64,7 +68,7 @@ const Base = () => (
           <span>Jenis Cover : Soft Cover</span>
         </li>
         <li>
-          <span>Jenis Edisi : Edisi Reguler ( Terbaru )</span>
+          <span>Jenis Edisi : Edisi Reguler (Terbaru)</span>
         </li>
         <li>
           <span>Penulis : Imam Fakhruddin Ar-Razi</span>
@@ -100,7 +104,7 @@ const Base = () => (
       </div>
     </div>
 
-    <div>
+    <div style={{ width: '80%' }} className="mx-auto">
       <blockquote className="mt-1 text-center">
         <span className="quote-icon text-center">
           <svg
@@ -122,7 +126,7 @@ const Base = () => (
           style={{ lineHeight: '2rem', borderBottom: 'solid 1.5px #000000' }}
         >
           <p>
-            <em>Sangat bagus mudah dipelajari dan mudah dimengeri.</em>
+            <em>Sangat bagus mudah dipelajari dan mudah dimengerti.</em>
           </p>
           <p style={{ paddingBottom: '1rem' }}>
             <strong>Siti Munawaroh</strong> - Jawa Tengah
@@ -131,7 +135,7 @@ const Base = () => (
       </blockquote>
     </div>
 
-    <div className="mt-12">
+    <div className="mx-auto mt-12" style={{ width: '80%' }}>
       <blockquote className="mt-1 text-center">
         <span className="quote-icon text-center">
           <svg
@@ -165,7 +169,10 @@ const Base = () => (
       </blockquote>
     </div>
 
-    <div className="mx-auto mt-20 max-w-screen-lg px-3">
+    <div
+      className="mx-auto mt-20 max-w-screen-lg px-3"
+      style={{ width: '90%' }}
+    >
       <div className="mb-5 text-center">
         <h2
           className="text-4xl font-bold text-gray-900"
@@ -194,12 +201,14 @@ const Base = () => (
       <VerticalContentRow
         image="/assets/images/images_guarantee.webp"
         imageAlt="Image Guarantee"
-        title={''}
-        description={''}
       />
     </div>
 
-    <div className="mx-auto mt-20 max-w-screen-lg px-3" id="form-checkout">
+    <div
+      className="mx-auto mt-20 max-w-screen-lg px-3"
+      id="form-checkout"
+      style={{ width: '90%' }}
+    >
       <div className="text-center">
         <h2
           className="text-xl font-bold text-gray-900"

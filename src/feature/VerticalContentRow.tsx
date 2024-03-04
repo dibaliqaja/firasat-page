@@ -2,8 +2,6 @@ import className from 'classnames';
 import { useRouter } from 'next/router';
 
 type IVerticalFeatureRowProps = {
-  title: string;
-  description: string;
   image: string;
   imageAlt: string;
   reverse?: boolean;
@@ -15,9 +13,6 @@ const VerticalContentRow = (props: IVerticalFeatureRowProps) => {
     'flex',
     'flex-wrap',
     'items-center',
-    {
-      'flex-row-reverse': props.reverse,
-    },
   );
 
   const router = useRouter();
